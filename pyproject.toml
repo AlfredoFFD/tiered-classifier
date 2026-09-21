@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tiered-classifier"
+version = "0.1.0"
+description = "Tiered classification with an LLM in the loop and a closed-vocabulary guard: rules first, model second, nothing silently dropped."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Alfredo F. Frontera Del Valle" }]
+dependencies = ["pydantic>=2.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+include = ["tiered*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

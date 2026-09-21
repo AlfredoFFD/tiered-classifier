@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="430" viewBox="0 0 900 430" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+  <rect width="900" height="430" rx="10" fill="#0d1117" stroke="#30363d"/>
+  <rect x="1" y="1" width="898" height="34" rx="9" fill="#161b22"/>
+  <circle cx="22" cy="18" r="5" fill="#f85149"/><circle cx="40" cy="18" r="5" fill="#d29922"/><circle cx="58" cy="18" r="5" fill="#3fb950"/>
+  <text x="82" y="23" font-size="12" fill="#8b949e">python examples/quickstart.py &#8212; 9 items</text>
+
+  <text x="50" y="66" font-size="11" fill="#8b949e">CHEAPEST FIRST. FIRST TIER THAT PRODUCES A VALID LABEL WINS.</text>
+
+  <g>
+    <rect x="50" y="80" width="170" height="62" rx="6" fill="#161b22" stroke="#30363d"/>
+    <text x="66" y="104" font-size="13" fill="#c9d1d9">1 &#183; overrides</text>
+    <text x="66" y="124" font-size="11" fill="#8b949e">a human decided</text>
+    <text x="204" y="104" font-size="15" fill="#8b949e" text-anchor="end">0</text>
+
+    <rect x="240" y="80" width="170" height="62" rx="6" fill="#161b22" stroke="#3fb950"/>
+    <text x="256" y="104" font-size="13" fill="#c9d1d9">2 &#183; rules</text>
+    <text x="256" y="124" font-size="11" fill="#8b949e">free, most items</text>
+    <text x="394" y="104" font-size="15" fill="#3fb950" text-anchor="end">7</text>
+
+    <rect x="430" y="80" width="170" height="62" rx="6" fill="#161b22" stroke="#58a6ff"/>
+    <text x="446" y="104" font-size="13" fill="#c9d1d9">3 &#183; model</text>
+    <text x="446" y="124" font-size="11" fill="#8b949e">the long tail</text>
+    <text x="584" y="104" font-size="15" fill="#58a6ff" text-anchor="end">1</text>
+
+    <rect x="620" y="80" width="170" height="62" rx="6" fill="#161b22" stroke="#d29922"/>
+    <text x="636" y="104" font-size="13" fill="#c9d1d9">4 &#183; default</text>
+    <text x="636" y="124" font-size="11" fill="#8b949e">flagged, counted</text>
+    <text x="784" y="104" font-size="15" fill="#d29922" text-anchor="end">1</text>
+  </g>
+  <g stroke="#484f58" stroke-width="1.5" fill="none">
+    <path d="M222 111 h14"/><path d="M412 111 h14"/><path d="M602 111 h14"/>
+  </g>
+  <g fill="#484f58">
+    <path d="M236 107 l6 4 -6 4 z"/><path d="M426 107 l6 4 -6 4 z"/><path d="M616 107 l6 4 -6 4 z"/>
+  </g>
+
+  <text x="50" y="172" font-size="12" fill="#8b949e">7 of 9 never reached a model. Of the 2 that did, 1 came back with a label that does not exist:</text>
+
+  <rect x="50" y="190" width="740" height="152" rx="8" fill="#161b22" stroke="#30363d"/>
+  <text x="70" y="216" font-size="12" fill="#8b949e">item 9</text>
+  <text x="140" y="216" font-size="13" fill="#c9d1d9">QUARRY LANE HOLDINGS &#8212; $940.00 out</text>
+
+  <text x="70" y="246" font-size="12" fill="#8b949e">model &#8594;</text>
+  <text x="140" y="246" font-size="13" fill="#c9d1d9">{"label": </text>
+  <text x="228" y="246" font-size="13" fill="#f85149">"Miscellaneous Expenses"</text>
+  <text x="418" y="246" font-size="13" fill="#c9d1d9">, "confidence": 91}</text>
+
+  <text x="70" y="276" font-size="12" fill="#8b949e">guard  &#8594;</text>
+  <text x="140" y="276" font-size="13" fill="#f85149">REFUSED</text>
+  <text x="212" y="276" font-size="13" fill="#8b949e">not in the taxonomy &#183; 91% confident is still 100% wrong</text>
+
+  <text x="70" y="306" font-size="12" fill="#8b949e">result &#8594;</text>
+  <text x="140" y="306" font-size="13" fill="#d29922">Uncategorized</text>
+  <text x="256" y="306" font-size="13" fill="#8b949e">conf 0 &#183;</text>
+  <text x="320" y="306" font-size="13" fill="#d29922">[NEEDS_REVIEW]</text>
+  <text x="440" y="306" font-size="13" fill="#8b949e">&#183; still in the totals, not dropped</text>
+
+  <text x="70" y="330" font-size="11" fill="#484f58">llm_calls 2 &#183; llm_count 1 &#8212; when those diverge, that is your hallucination rate, measured.</text>
+
+  <text x="50" y="378" font-size="12" fill="#8b949e">Every item gets a verdict. Nothing returns null. Nothing disappears between tiers.</text>
+  <text x="50" y="400" font-size="11" fill="#484f58">Delete the taxonomy check in tiered/llm.py and 5 tests fail. Mutation-tested, not assumed.</text>
+</svg>
